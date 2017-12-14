@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twirling</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+   <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/npm.js"></script>-->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+     $(document).ready(function(){
+         var audio=$(audio)[0];
+         $("#audioPlayer").click(function(){
+             $(".msg").fadeIn();
+             $(".msg").fadeIn("slow");
+             $(".msg").fadeIn(100000);
+             if(audio.paused){
+                 audio.play();
+                 $("#audioPlayer").attr('src','img/pause.png');
+
+                 var audios = $('audio');
+                 for (var i = 0; i < audios.length; i++) {
+                     if (i != index && !audios[i].paused) {
+                         audios[i].pause();
+                         $('#audioPlayer' + i).attr('src', 'img/play.png');
+                     }
+                 }
+             } else {
+                 audio.pause();
+                 $('#audioPlayer').attr('src', 'img/play.png');
+             }
+         })
+     })
+
+    </script>
+    <style rel="stylesheet" type="text/css">
+
+        .msg{
+            width:100px;
+            height:20px;
+            display: none;
+            float: left;
+        }
+        .audio_left{
+           float: left;
+
+        }
+        span{
+            display: block;
+            float: left;
+        }
+        ::after{
+            clear: left;
+        }
+        span img{
+            width: 30px;
+            height: 30px;
+        }
+        .audio_left img{
+            width:30px;
+            height:30px;
+        }
+    </style>
+</head>
+<body>
+<!--<form>
+    <label>电子邮件</label>
+    <input type="email" placeholder="请输入您的电子邮件"/>
+</form>-->
+<div id="wrapper">
+    <span>
+        <img src="img/user.png"/>
+    </span>
+    <audio></audio>
+    <div class="audio_left">
+        <img id="audioPlayer" src="img/play.png"/>
+    </div>
+    <section class="msg">jsvksdnvm,sdnvjk</section>
+</div>
+</body>
+</html>
